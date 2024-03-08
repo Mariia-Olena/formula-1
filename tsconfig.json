@@ -23,8 +23,8 @@
     /* Paths */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*", "./dist/*", ""],
-      "ui/*": ["src/ui/*"]
+      "ui/*": ["src/ui/*"],
+      "pages/*": ["src/pages/*"]
     }
   },
   "include": ["src"],
