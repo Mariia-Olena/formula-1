@@ -112,6 +112,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
   hyphens: auto;
+  color: var( --color-grey-900)
 }
 
 img {

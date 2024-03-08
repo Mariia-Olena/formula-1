@@ -1,5 +1,5 @@
 function Drivers() {
-  return <div></div>;
+  return <div>{}</div>;
 }
 
 export default Drivers;
