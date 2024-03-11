@@ -13,6 +13,7 @@ export default defineConfig({
       features: `${path.resolve(__dirname, './src/features/')}`,
       utils: `${path.resolve(__dirname, './src/utils/')}`,
       styles: `${path.resolve(__dirname, './src/styles/')}`,
+      context: `${path.resolve(__dirname, './src/context/')}`,
     },
   },
 });

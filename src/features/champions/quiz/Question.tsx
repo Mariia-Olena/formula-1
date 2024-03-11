@@ -1,10 +1,9 @@
-import { ChampionInterface } from 'services/apiChampions';
+import { useQuiz } from 'context/QuizContext';
 
-interface QuestionPropsInterface {
-  champion: ChampionInterface;
-}
+function Question() {
+  const { champions, index } = useQuiz();
+  const champion = champions[index];
 
-function Question({ champion }: QuestionPropsInterface) {
   return <p>Who was world champion in {champion.year}?</p>;
 }
 
