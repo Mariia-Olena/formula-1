@@ -1,5 +1,5 @@
-import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { useChampions } from 'features/champions/useChampions';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+
 import { ChampionInterface } from 'services/apiChampions';
 
 enum Status {
@@ -11,15 +11,16 @@ enum Status {
 
 interface QuizStateInterface {
   status: Status;
-  questions: ChampionInterface[];
+  champions: ChampionInterface[];
   answer: string;
   points: number;
   highScore: number;
+  index: number;
 }
 
 const initialState: QuizStateInterface = {
   status: Status.loading,
-  questions: [
+  champions: [
     { name: 'Jim Clark', year: 1963, constructor: 'Alfa Romeo' },
     { name: 'Jim Clark', year: 1965, constructor: 'Alfa Romeo' },
     { name: 'Jack Brabham', year: 1966, constructor: 'Alfa Romeo' },
@@ -34,6 +35,7 @@ const initialState: QuizStateInterface = {
   answer: '',
   points: 0,
   highScore: 0,
+  index: 0,
 };
 
 const quizSlice = createSlice({

@@ -21,13 +21,14 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Paths */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "ui/*": ["src/ui/*"],
       "pages/*": ["src/pages/*"],
       "services/*": ["src/services/*"],
       "features/*": ["src/features/*"],
-      "utils/*": ["src/utils/*"]
+      "utils/*": ["src/utils/*"],
+      "styles/*": ["src/styles/*"]
     }
   },
   "include": ["src"],

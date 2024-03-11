@@ -1,0 +1,34 @@
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+%header1 {
+  font-size: rem(38);
+  font-weight: 700;
+  line-height: rem(46);
+}
+
+%header2 {
+  font-size: rem(30);
+  font-weight: 700;
+  line-height: rem(36);
+}
+
+%header3 {
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: rem(26);
+}
+
+%header4 {
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: rem(20);
+}
+
+%text {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(26);
+}
