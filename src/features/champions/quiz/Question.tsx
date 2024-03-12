@@ -1,4 +1,3 @@
-import './quiz.scss';
 import { useQuiz } from 'context/QuizContext';
 
 function Question() {
@@ -6,7 +5,7 @@ function Question() {
   const champion = champions[index];
 
   return (
-    <div className='question'>
+    <div className='quiz-question'>
       <h3>Who was world champion in {champion.year}?</h3>
     </div>
   );

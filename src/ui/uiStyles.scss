@@ -1,0 +1,51 @@
+@import 'styles/styleVariables';
+
+.app {
+  &-layout {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+  }
+
+  &-main {
+    background-color: var(--color-grey-50);
+    overflow: auto;
+  }
+
+  &-header {
+    background-color: var(--color-grey-800);
+    color: var(--color-grey-0);
+    padding: rem(15) rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-menu {
+      display: flex;
+      gap: rem(20);
+
+      & > li {
+        @extend %header1;
+
+        &:hover {
+          color: var(--color-red-600);
+        }
+
+        .active {
+          color: var(--color-red-600);
+        }
+      }
+    }
+
+    .app-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > img {
+        height: rem(24);
+        width: auto;
+      }
+    }
+  }
+}

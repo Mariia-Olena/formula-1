@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import './quiz.scss';
 import { ChampionInterface } from 'services/apiChampions';
 import { shuffle } from 'utils/helpers';
 import { useQuiz } from 'context/QuizContext';
@@ -47,17 +46,17 @@ function Options() {
     champion.name === answer?.name && champion.year === answer.year;
 
   return (
-    <div className='options'>
+    <div className='quiz-options'>
       {options.map((option) => (
         <button
           onClick={() => dispatch({ type: 'newAnswer', payload: option })}
           key={option.year}
           disabled={hasAnswered}
-          className={`button ${hasAnswered ? 'answer' : ''} ${
+          className={`button ${hasAnswered ? 'quiz-answer' : ''} ${
             option.name === answer?.name && option.year === answer?.year
               ? isAnswerCorrect
-                ? 'correct'
-                : 'incorrect'
+                ? 'quiz-correct'
+                : 'quiz-incorrect'
               : ''
           } `}
         >

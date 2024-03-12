@@ -1,14 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-
-const StyledHeaderMenu = styled.ul`
-  display: flex;
-  gap: 2.4rem;
-`;
 
 function HeaderMenu() {
   return (
-    <StyledHeaderMenu>
+    <ul className='app-header-menu'>
       <li>
         <NavLink to='/drivers'>DRIVERS</NavLink>
       </li>
@@ -18,7 +12,7 @@ function HeaderMenu() {
       <li>
         <NavLink to='/constructors'>CONSTRUCTORS</NavLink>
       </li>
-    </StyledHeaderMenu>
+    </ul>
   );
 }
 

@@ -1,4 +1,3 @@
-import './quiz.scss';
 import { useQuiz } from 'context/QuizContext';
 
 function FinishScreen() {
@@ -6,13 +5,13 @@ function FinishScreen() {
   const percentage = (points / maxPossiblePoints) * 100;
 
   return (
-    <div className=' container finishScreen'>
+    <div className='quiz-container quiz-finishScreen'>
       <img
-        className='img'
+        className='quiz-img'
         src='/src/assets/quiz_champion.jpg'
         alt='lewis hamilton with a trophy'
       />
-      <p className='title'>🏆 congratulations 🎉</p>
+      <p className='quiz-title'>🏆 congratulations 🎉</p>
       <p>
         You scored <strong>{points}</strong> points out of {maxPossiblePoints} (
         {Math.ceil(percentage)}%)

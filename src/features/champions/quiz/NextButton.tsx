@@ -9,7 +9,7 @@ function NextButton() {
     return (
       <button
         onClick={() => dispatch({ type: 'nextQuestion' })}
-        className='nextButton'
+        className='quiz-nextButton'
       >
         NEXT ▶
       </button>
@@ -20,7 +20,7 @@ function NextButton() {
     return (
       <button
         onClick={() => dispatch({ type: 'finish' })}
-        className='nextButton'
+        className='quiz-nextButton'
       >
         Finish 🏁
       </button>

@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import GlobalStyles from './styles/GlobalStyles';
+import { QuizProvider } from 'context/QuizContext';
 import AppLayout from 'ui/AppLayout';
 import Drivers from 'pages/Drivers';
 import Constructors from 'pages/Constructors';
 import Champions from 'pages/Champions';
-import { QuizProvider } from 'context/QuizContext';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,7 +18,6 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <GlobalStyles />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<AppLayout />}>

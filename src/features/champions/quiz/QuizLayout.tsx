@@ -1,4 +1,4 @@
-import './quiz.scss';
+import './quizStyles.scss';
 import { useQuiz } from 'context/QuizContext';
 import QuizScreen from 'features/champions/quiz/QuizScreen';
 import StartScreen from 'features/champions/quiz/StartScreen';
@@ -8,7 +8,7 @@ function QuizLayout() {
   const { status } = useQuiz();
 
   return (
-    <div className='layout'>
+    <div className='quiz-layout'>
       <div>
         <div>
           {status === 'loading' && <StartScreen />}

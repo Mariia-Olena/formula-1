@@ -3,6 +3,14 @@
   @return $remValue;
 }
 
+%header1 {
+  font-family: 'Jockey One';
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: rem(30);
+  letter-spacing: 0.05em;
+}
+
 %header3 {
   font-family: 'Jockey One';
   font-size: rem(30);

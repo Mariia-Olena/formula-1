@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import './quiz.scss';
 import { useQuiz } from 'context/QuizContext';
 import { useChampions } from 'features/champions/useChampions';
 import { shuffle } from 'utils/helpers';
@@ -21,7 +20,7 @@ function StartScreen() {
   }
 
   return (
-    <div className='container startScreen'>
+    <div className='quiz-container quiz-startScreen'>
       <h2>
         Are you a true <span>Formula-1</span> fan?
       </h2>
@@ -32,25 +31,25 @@ function StartScreen() {
       <p>How many you try to guess?</p>
       <div>
         <button
-          className={`select ${numQuestions === 10 ? 'chosen' : ''}`}
+          className={`quiz-select ${numQuestions === 10 ? 'quiz-chosen' : ''}`}
           onClick={() => setNumQuestions(10)}
         >
           10 Champions
         </button>
         <button
-          className={`select ${numQuestions === 20 ? 'chosen' : ''}`}
+          className={`quiz-select ${numQuestions === 20 ? 'quiz-chosen' : ''}`}
           onClick={() => setNumQuestions(20)}
         >
           20 Champions
         </button>
         <button
-          className={`select ${numQuestions === 30 ? 'chosen' : ''}`}
+          className={`quiz-select ${numQuestions === 30 ? 'quiz-chosen' : ''}`}
           onClick={() => setNumQuestions(30)}
         >
           30 Champions
         </button>
         <button
-          className={`select ${numQuestions === 1 ? 'chosen' : ''}`}
+          className={`quiz-select ${numQuestions === 1 ? 'quiz-chosen' : ''}`}
           onClick={() => setNumQuestions(1)}
         >
           All of them

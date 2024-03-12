@@ -1,26 +1,15 @@
-import styled from 'styled-components';
+import './uiStyles.scss';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
 
-const StyledAppLayout = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-rows: auto 1fr;
-`;
-
-const Main = styled.main`
-  background-color: var(--color-grey-50);
-  overflow: auto;
-`;
-
 function AppLayout() {
   return (
-    <StyledAppLayout>
+    <div className='app-layout'>
       <Header />
-      <Main>
+      <main className='app-main'>
         <Outlet />
-      </Main>
-    </StyledAppLayout>
+      </main>
+    </div>
   );
 }
 

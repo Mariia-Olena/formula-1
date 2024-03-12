@@ -1,4 +1,3 @@
-import './quiz.scss';
 import { useQuiz } from 'context/QuizContext';
 import Options from 'features/champions/quiz/Options';
 import Question from 'features/champions/quiz/Question';
@@ -11,10 +10,10 @@ function QuizScreen() {
     champion.name === answer?.name && champion.year === answer.year;
 
   return (
-    <div className='container quizScreen'>
+    <div className='quiz-container quiz-quizScreen'>
       <Question />
       <Options />
-      <div className='box'>
+      <div className='quiz-box'>
         <p>
           Your score: <strong> {points}</strong>pts
         </p>
