@@ -1,12 +1,17 @@
 @import 'styles/styleVariables';
 
 .button {
+  @extend %button;
   background-color: var(--color-red-600);
   border: none;
   color: var(--color-grey-0);
-  padding: rem(10) rem(30);
+  padding: rem(12) rem(30);
 
   &:hover {
     background-color: var(--color-red-500);
+  }
+
+  &:disabled {
+    background-color: var(--color-red-400);
   }
 }

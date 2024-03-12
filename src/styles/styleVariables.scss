@@ -3,32 +3,22 @@
   @return $remValue;
 }
 
-%header1 {
-  font-size: rem(38);
-  font-weight: 700;
-  line-height: rem(46);
-}
-
-%header2 {
-  font-size: rem(30);
-  font-weight: 700;
-  line-height: rem(36);
-}
-
 %header3 {
-  font-size: rem(22);
-  font-weight: 700;
-  line-height: rem(26);
-}
-
-%header4 {
-  font-size: rem(16);
-  font-weight: 700;
-  line-height: rem(20);
+  font-family: 'Jockey One';
+  font-size: rem(30);
+  font-weight: 400;
+  line-height: rem(28);
+  text-align: center;
 }
 
 %text {
   font-size: rem(16);
   font-weight: 400;
-  line-height: rem(26);
+  line-height: rem(20);
+}
+
+%button {
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: rem(22);
 }

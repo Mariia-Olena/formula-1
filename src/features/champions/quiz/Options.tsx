@@ -1,5 +1,7 @@
-import { ChampionInterface } from 'services/apiChampions';
+import { useEffect, useState } from 'react';
+
 import './quiz.scss';
+import { ChampionInterface } from 'services/apiChampions';
 import { shuffle } from 'utils/helpers';
 import { useQuiz } from 'context/QuizContext';
 
@@ -32,17 +34,32 @@ function createOptions(
 }
 
 function Options() {
-  const { champions, index, dispatch } = useQuiz();
+  const { champions, index, answer, dispatch } = useQuiz();
+  const [options, setOptions] = useState<ChampionInterface[]>([]);
+
+  useEffect(() => {
+    setOptions(createOptions(champions, index));
+  }, [champions, index]);
+
   const champion = champions[index];
-  const options = createOptions(champions, index);
+  const hasAnswered = answer !== null;
+  const isAnswerCorrect =
+    champion.name === answer?.name && champion.year === answer.year;
 
   return (
     <div className='options'>
       {options.map((option) => (
         <button
           onClick={() => dispatch({ type: 'newAnswer', payload: option })}
-          className='button'
           key={option.year}
+          disabled={hasAnswered}
+          className={`button ${hasAnswered ? 'answer' : ''} ${
+            option.name === answer?.name && option.year === answer?.year
+              ? isAnswerCorrect
+                ? 'correct'
+                : 'incorrect'
+              : ''
+          } `}
         >
           {option.name}
         </button>
