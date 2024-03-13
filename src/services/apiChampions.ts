@@ -13,11 +13,11 @@ export interface ChampionInterface {
   constructor: string;
 }
 
-function transformChampions(arr: ChampionApiInterface[]): ChampionInterface[] {
-  return arr.map((item) => {
-    const key = +Object.keys(item)[0];
-    return { ...item[key], year: key };
-  });
+export interface WorldChampionInterface {
+  id: number;
+  name: string;
+  numTitles: string;
+  photo: string;
 }
 
 export async function getChampions() {
@@ -33,4 +33,24 @@ export async function getChampions() {
   ]);
 
   return champions;
+}
+
+export async function getWorldChampions() {
+  const { data, error } = await supabase.from('worldChampions').select('*');
+
+  if (error) {
+    console.error(error);
+    throw new Error('Champions could not be loaded');
+  }
+
+  const worldChampions: WorldChampionInterface[] = data;
+
+  return worldChampions;
+}
+
+function transformChampions(arr: ChampionApiInterface[]): ChampionInterface[] {
+  return arr.map((item) => {
+    const key = +Object.keys(item)[0];
+    return { ...item[key], year: key };
+  });
 }
