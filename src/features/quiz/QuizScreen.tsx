@@ -1,7 +1,7 @@
 import { useQuiz } from 'context/QuizContext';
-import Options from 'features/champions/quiz/Options';
-import Question from 'features/champions/quiz/Question';
-import NextButton from 'features/champions/quiz/NextButton';
+import Options from 'features/quiz/Options';
+import Question from 'features/quiz/Question';
+import NextButton from 'features/quiz/NextButton';
 
 function QuizScreen() {
   const { champions, index, points, answer } = useQuiz();

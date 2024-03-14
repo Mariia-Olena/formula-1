@@ -2,7 +2,7 @@
 
 .champions {
   &-list {
-    height: calc(100vh - 60px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;

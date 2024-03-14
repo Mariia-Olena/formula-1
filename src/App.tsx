@@ -6,6 +6,7 @@ import AppLayout from 'ui/AppLayout';
 import Drivers from 'pages/Drivers';
 import Constructors from 'pages/Constructors';
 import Champions from 'pages/Champions';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,6 +37,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }

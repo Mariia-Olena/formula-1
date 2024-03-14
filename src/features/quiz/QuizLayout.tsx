@@ -1,8 +1,8 @@
 import './quizStyles.scss';
 import { useQuiz } from 'context/QuizContext';
-import QuizScreen from 'features/champions/quiz/QuizScreen';
-import StartScreen from 'features/champions/quiz/StartScreen';
-import FinishScreen from 'features/champions/quiz/FinishScreen';
+import QuizScreen from 'features/quiz/QuizScreen';
+import StartScreen from 'features/quiz/StartScreen';
+import FinishScreen from 'features/quiz/FinishScreen';
 
 function QuizLayout() {
   const { status } = useQuiz();

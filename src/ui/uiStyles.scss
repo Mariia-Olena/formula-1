@@ -3,12 +3,12 @@
 .app {
   &-layout {
     display: grid;
-    height: 100vh;
     grid-template-rows: auto 1fr;
   }
 
   &-main {
     background-color: var(--color-grey-50);
+    height: calc(100vh - 60px);
   }
 
   &-header {

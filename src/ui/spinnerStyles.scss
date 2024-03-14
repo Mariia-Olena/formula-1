@@ -1,48 +1,48 @@
+@import 'styles/styleVariables';
+
 .spinner {
+  height: 100%;
   position: relative;
-  display: flex;
-  gap: 10px;
-  height: 600px;
+  overflow-x: hidden;
 
-  & > svg {
-    width: 200px;
-  }
-
-  svg:nth-child(1) {
+  &-box {
+    display: flex;
     position: absolute;
-    top: 100px;
+    left: 100%;
     animation-name: race;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
+  }
+
+  &-svg {
+    margin-right: 100vw;
+    transform: translate(0, -50%);
+    & > svg {
+      width: 200px;
+    }
+  }
+
+  div:nth-child(1) {
+    top: 40%;
+    animation-timing-function: linear;
+  }
+
+  div:nth-child(2) {
+    top: 50%;
     animation-timing-function: ease;
   }
 
-  svg:nth-child(2) {
-    position: absolute;
-    top: 175px;
-    animation-name: race;
-    animation-duration: 2.3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-
-  svg:nth-child(3) {
-    position: absolute;
-    top: 250px;
-    animation-name: race;
-    animation-duration: 2.7s;
-    animation-iteration-count: infinite;
+  div:nth-child(3) {
+    top: 60%;
     animation-timing-function: ease-in;
   }
-
-  overflow-x: hidden;
 }
 
 @keyframes race {
   from {
-    left: 100%;
+    transform: translateX(0);
   }
   to {
-    left: -200px;
+    transform: translateX(-100%);
   }
 }
