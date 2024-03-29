@@ -6,7 +6,11 @@ export function useChampions() {
     isLoading,
     error,
     data: champions,
-  } = useQuery({ queryKey: ['champions'], queryFn: getChampions });
+  } = useQuery({
+    queryKey: ['champions'],
+    queryFn: getChampions,
+    retry: 1,
+  });
 
   return { isLoading, error, champions };
 }

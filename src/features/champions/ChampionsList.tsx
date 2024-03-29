@@ -1,12 +1,10 @@
 import Champion from 'features/champions/Champion';
 import { useWorldChampions } from 'features/champions/useWorldChampions';
-import Spinner from 'ui/Spinner';
 import './championsStyles.scss';
 
 function ChampionsList() {
-  const { isLoading, worldChampions } = useWorldChampions();
+  const { worldChampions } = useWorldChampions();
 
-  if (isLoading) return <Spinner />;
   return (
     <ul className='champions-list'>
       <div className='champions-slide'>

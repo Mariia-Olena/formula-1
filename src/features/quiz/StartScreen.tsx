@@ -28,7 +28,7 @@ function StartScreen() {
         Challenge yourself by naming all the Formula 1 champions from the
         present <br /> to the way back to 1950
       </p>
-      <p>How many you try to guess?</p>
+      <p>How many dare you try to guess?</p>
       <div>
         <button
           className={`quiz-select ${numQuestions === 10 ? 'quiz-chosen' : ''}`}

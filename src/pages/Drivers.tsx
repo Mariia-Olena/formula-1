@@ -1,5 +1,7 @@
+import DriversList from 'features/drivers/DriversList';
+
 function Drivers() {
-  return <div>{}</div>;
+  return <DriversList />;
 }
 
 export default Drivers;

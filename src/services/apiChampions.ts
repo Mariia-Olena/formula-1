@@ -1,4 +1,4 @@
-import supabase from './supabase';
+import { supabase } from './supabase';
 
 interface ChampionApiInterface {
   [key: number]: {
@@ -18,6 +18,13 @@ export interface WorldChampionInterface {
   name: string;
   numTitles: string;
   photo: string;
+}
+
+function transformChampions(arr: ChampionApiInterface[]): ChampionInterface[] {
+  return arr.map((item) => {
+    const key = +Object.keys(item)[0];
+    return { ...item[key], year: key };
+  });
 }
 
 export async function getChampions() {
@@ -46,11 +53,4 @@ export async function getWorldChampions() {
   const worldChampions: WorldChampionInterface[] = data;
 
   return worldChampions;
-}
-
-function transformChampions(arr: ChampionApiInterface[]): ChampionInterface[] {
-  return arr.map((item) => {
-    const key = +Object.keys(item)[0];
-    return { ...item[key], year: key };
-  });
 }

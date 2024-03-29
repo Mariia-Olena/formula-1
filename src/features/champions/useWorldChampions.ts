@@ -6,7 +6,11 @@ export function useWorldChampions() {
     isLoading,
     error,
     data: worldChampions,
-  } = useQuery({ queryKey: ['worldChampions'], queryFn: getWorldChampions });
+  } = useQuery({
+    queryKey: ['worldChampions'],
+    queryFn: getWorldChampions,
+    retry: 1,
+  });
 
   return { isLoading, error, worldChampions };
 }
